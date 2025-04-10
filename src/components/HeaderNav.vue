@@ -45,8 +45,11 @@
                         </a>
                     </li>
                     <a class="telephone"> 866-932-1801 </a>
-                    <button>Talk to an Expert</button>
+                    <button class="btn-primary">Talk to an Expert</button>
                 </ul>
+                <div>
+                    <img src="../assets/hamburger.svg" alt="hamburger" class="hamburger" />
+                </div>
             </nav>
         </div>
     </header>
@@ -119,22 +122,23 @@ ul a:hover {
     color: #c7141f;
 }
 
-/* Button CSS */
+.hamburger {
+    display: none;
+}
 
 button {
-    background-color: #e81c1c;
-    color: #fff;
-    border: none;
     padding: 6px 10px;
-    font-size: 16px;
-    font-weight: 700;
-    cursor: pointer;
-    border-radius: 20px;
-    transition: background-color .12s ease-in-out;
 }
 
-button:hover {
-    background-color: #c7141f;
-}
+@media (max-width: 768px) {
+    ul {
+        display: none;
+    }
 
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+}
 </style>
