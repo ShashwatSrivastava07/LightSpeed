@@ -42,6 +42,7 @@ export default {
 .btn-primary {
   background-color: #e81c1c;
   color: #fff;
+  text-decoration: none;
   border: 1px solid #e81c1c;
   font-size: 16px;
   font-weight: 700;
@@ -68,6 +69,30 @@ export default {
 .btn-secondary:hover {
   background-color: #e81c1c;
   color: #fff;
+}
+
+.desktop-width {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.link {
+    display: block;
+    color:#000;
+    text-decoration: underline;
+    font-size: 20px;
+    color: #e81c1c;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.logo-login {
+    margin-bottom: 20px;
+}
+
+.red.svelte-1xm44i5 {
+    fill: #e81c1c;
 }
 
 </style>

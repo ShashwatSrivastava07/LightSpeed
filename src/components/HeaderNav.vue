@@ -1,7 +1,7 @@
 <template>
     <header>
         <div>
-            <a href="#">
+            <router-link to="/">
                 <svg width="130" height="30" viewBox="0 0 130 31" class="tw-fill-charcoal">
                     <path class="flame"
                         d="M9.85 0L11.25 2.39932C11.55 2.89918 11.55 3.49901 11.25 3.99887L3.05 18.1949L6.85 24.893C7.45 25.9927 8.55 26.5925 9.75 26.5925C10.95 26.5925 12.05 25.8927 12.75 24.893L16.65 18.1949L15.65 16.3954L11.25 23.9932C10.95 24.4931 10.45 24.793 9.85 24.793C9.25 24.793 8.75 24.4931 8.45 23.9932L5.15 18.1949L12.75 4.99859L14.15 7.39792C14.45 7.89778 14.45 8.49761 14.15 8.99747L8.85 18.1949L9.85 19.9944L15.65 9.99718L19.45 16.5953C20.05 17.595 20.05 18.8947 19.45 19.8944L15.65 26.5925C15.05 27.5922 13.25 29.8916 9.95 29.8916C6.65 29.8916 4.85 27.5922 4.25 26.5925L0.45 19.8944C-0.15 18.8947 -0.15 17.595 0.45 16.5953L9.85 0Z">
@@ -36,16 +36,19 @@
                     <path d="M30.5999 7.09766H27.8999V22.7932H30.5999V7.09766Z"></path>
                     <path d="M35.3997 11.8965H32.6997V22.7934H35.3997V11.8965Z"></path>
                 </svg>
-            </a>
+            </router-link>  
             <nav>
                 <ul>
                     <li v-for="item in navList" :key="item">
-                        <a href="#">
-                            {{ item }}
-                        </a>
+                        <router-link :to="item.path">
+                            {{ item.name }}
+                        </router-link>
                     </li>
                     <a class="telephone"> 866-932-1801 </a>
                     <button class="btn-primary">Talk to an Expert</button>
+                    <router-link to="/myprofile">
+                        <img class="avatar" src="https://i.pravatar.cc/150?img=3" alt="User Avatar" />
+                    </router-link>
                 </ul>
                 <div>
                     <img src="../assets/hamburger.svg" alt="hamburger" class="hamburger" />
@@ -62,7 +65,12 @@ export default {
 
     data() {
         return {
-            navList: ["About", "Help", "Login"],
+            navList: [
+                { name: 'Home', path: '/' },
+                { name: 'About', path: '/about' },
+                { name: 'Signup', path:'/Signup'}
+            ]
+
         };
     },
 }
@@ -129,6 +137,15 @@ ul a:hover {
 button {
     padding: 6px 10px;
 }
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
 
 @media (max-width: 768px) {
     ul {

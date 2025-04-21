@@ -73,6 +73,12 @@ button {
     padding: 14px 24px;
 }
 
+@media (max-width:1440px) {
+    .banner-main {
+        padding-inline: 20px;
+    }
+}
+
 
 @media (max-width:900px) {
     .banner-main div:first-child {
@@ -82,7 +88,7 @@ button {
 
 @media (max-width:768px) {
     .banner-main {
-        padding: 4% 8%;
+        padding: 4%;
         background: #e9e9e9;
     }
 
