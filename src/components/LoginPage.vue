@@ -19,8 +19,6 @@
             <div class="login-form">
                 <label for="user">Username *</label>
                 <input type="text" placeholder="Johndoe01" id="user" class="form-control" />
-                <label for="pass">Name *</label>
-                <input type="text" placeholder="John Doe" id="text" class="form-control" />
                 <label for="pass">Password *</label>
                 <input type="password" placeholder="Password" id="pass" class="form-control"/>
                 <div class="btn-wrap">
